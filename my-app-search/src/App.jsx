@@ -35,9 +35,7 @@ export default function App() {
       setLoading(true)
 
       fetchUsers(search, controller.signal)
-        .then(data => {
-          setUsers(data)
-        })
+        .then(data => setUsers(data))
         .catch(err => {
           if (err.name !== 'AbortError') {
             console.error(err)
