@@ -1,0 +1,27 @@
+From 4cedcdbef57803d094fa43e3e73ff838a446ede9 Mon Sep 17 00:00:00 2001
+From: gubod1003 <gubod1003@gmail.com>
+Date: Sat, 27 Jun 2026 19:33:06 +0300
+Subject: [PATCH] fin
+
+---
+ my-app-search/src/App.jsx | 4 +---
+ 1 file changed, 1 insertion(+), 3 deletions(-)
+
+diff --git a/my-app-search/src/App.jsx b/my-app-search/src/App.jsx
+index f762131..367b60b 100644
+--- a/my-app-search/src/App.jsx
++++ b/my-app-search/src/App.jsx
+@@ -35,9 +35,7 @@ export default function App() {
+       setLoading(true)
+ 
+       fetchUsers(search, controller.signal)
+-        .then(data => {
+-          setUsers(data)
+-        })
++        .then(data => setUsers(data))
+         .catch(err => {
+           if (err.name !== 'AbortError') {
+             console.error(err)
+-- 
+2.54.0.windows.1
+
